@@ -1,4 +1,4 @@
-# Mamina Teka by Zrina
+# Mamina Teka
 
 **Digitalni obiteljski spomenar maminih rukopisnih recepata** — progresivna web aplikacija (PWA) za očuvanje, pametnu digitalizaciju, kuhanje bez gašenja ekrana, obiteljsku sinkronizaciju i ispis uvezane obiteljske kuharice.
 

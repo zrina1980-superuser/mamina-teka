@@ -330,7 +330,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
                   Zadnje upisano u Teku
                 </h2>
                 <p className="text-xs sm:text-sm text-[#655A52] dark:text-stone-400">
-                  Posljednjih 5 dodanih recepata iz mamine bilježnice
+                  Posljednjih 5 dodanih recepata iz vaše zbirke
                 </p>
               </div>
               <button

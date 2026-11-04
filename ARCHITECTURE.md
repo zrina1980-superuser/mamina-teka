@@ -1,6 +1,6 @@
-# Arhitektura sustava — Mamina Teka by Zrina
+# Arhitektura sustava — Mamina Teka
 
-Ovaj dokument opisuje arhitekturu, podatkovni tok, pohranu podataka, sustav tiska PDF kuharice, višestupanjsku navigaciju i AI integracije aplikacije **Mamina Teka by Zrina**.
+Ovaj dokument opisuje arhitekturu, podatkovni tok, pohranu podataka, sustav tiska PDF kuharice, višestupanjsku navigaciju i AI integracije aplikacije **Mamina Teka**.
 
 ---
 

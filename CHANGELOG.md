@@ -1,4 +1,4 @@
-# Changelog — Mamina Teka by Zrina
+# Changelog — Mamina Teka
 
 Sve značajne promjene, nadogradnje i ispravci u aplikaciji dokumentirani su u nastavku.
 
