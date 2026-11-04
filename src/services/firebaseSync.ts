@@ -459,27 +459,7 @@ export function normalizeVaultMembers(
     });
   }
 
-  // 6. Ensure the invite-connected family member (Brankica Zrinski) is preserved if no other non-owner
-  //    member entry was retained after an earlier vault overwrite. If another Brankica email is already
-  //    present in memberMap, deduplicate so only her real Google email is shown.
-  const hasRealBrankicaEntry = Array.from(memberMap.values()).some(
-    (m) =>
-      m.email !== ownerEmail &&
-      m.email !== DEFAULT_CONNECTED_MEMBER_EMAIL &&
-      (m.name.toLowerCase().includes('brank') || m.email.includes('brank'))
-  );
-  if (hasRealBrankicaEntry && memberMap.has(DEFAULT_CONNECTED_MEMBER_EMAIL)) {
-    memberMap.delete(DEFAULT_CONNECTED_MEMBER_EMAIL);
-  } else if (
-    !Array.from(memberMap.values()).some((m) => m.email !== ownerEmail)
-  ) {
-    memberMap.set(DEFAULT_CONNECTED_MEMBER_EMAIL, {
-      name: DEFAULT_CONNECTED_MEMBER_NAME,
-      email: DEFAULT_CONNECTED_MEMBER_EMAIL,
-      role: 'member',
-      status: 'Aktivan član',
-    });
-  }
+  memberMap.delete(DEFAULT_CONNECTED_MEMBER_EMAIL);
 
   const members = Array.from(memberMap.values());
   const memberEmails = members.map((m) => m.email);
