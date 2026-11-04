@@ -1,0 +1,251 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *, .dark-mode, .dark-mode *));
+
+@layer base {
+  :root {
+    --font-display: 'Fraunces', Georgia, serif;
+    --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+    --font-hand: 'Caveat', cursive;
+  }
+
+  html,
+  body {
+    font-family: var(--font-sans);
+    background-color: #FAF6F0;
+    color: #231F1D;
+    overflow-x: hidden;
+    max-width: 100%;
+    overscroll-behavior-x: none;
+  }
+
+  html {
+    font-size: 16px;
+    transition: font-size 160ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  /* Mamin mod: 28% larger base rem scale for immediate effortless reading */
+  html.mamin-mod {
+    font-size: 20.5px;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display);
+    text-wrap: balance;
+  }
+
+  .font-handwriting {
+    font-family: var(--font-hand);
+  }
+
+  .font-mono-tabular {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Lined notebook paper motif for original manuscript cards */
+.teka-lined-paper {
+  background-color: #FDF9F1;
+  background-image:
+    linear-gradient(90deg, transparent 42px, rgba(186, 74, 60, 0.28) 42px, rgba(186, 74, 60, 0.28) 44px, transparent 44px),
+    repeating-linear-gradient(0deg, transparent, transparent 31px, rgba(95, 125, 149, 0.22) 31px, rgba(95, 125, 149, 0.22) 32px);
+}
+
+/* ==========================================================================
+   TOPLA TAMNA TEMA (Warm Rustic Dark Mode — #1C1917 / #292524 / #F5EFEB)
+   ========================================================================== */
+html.dark-mode,
+html.dark-mode body {
+  background-color: #1C1917 !important;
+  color: #F5EFEB !important;
+}
+
+/* Main backgrounds & containers */
+html.dark-mode .bg-\[\#FAF6F0\],
+html.dark-mode .bg-\[\#FAF7F2\],
+html.dark-mode .bg-\[\#FAF6F0\]\/95,
+html.dark-mode .bg-\[\#FAF6F0\]\/80,
+html.dark-mode .bg-\[\#FAF6F0\]\/60 {
+  background-color: #1C1917 !important;
+}
+
+/* Cards, modals & elevated surfaces (#292524 / #24201E) */
+html.dark-mode .bg-white,
+html.dark-mode .bg-white\/90,
+html.dark-mode .bg-\[\#FFFEFA\] {
+  background-color: #292524 !important;
+}
+
+html.dark-mode .bg-\[\#F3ECE1\],
+html.dark-mode .bg-\[\#F3ECE1\]\/60,
+html.dark-mode .bg-\[\#F3ECE1\]\/70,
+html.dark-mode .bg-\[\#F3ECE1\]\/45,
+html.dark-mode .bg-\[\#EAE0D1\],
+html.dark-mode .bg-\[\#EFE6D8\] {
+  background-color: #24201E !important;
+}
+
+html.dark-mode .bg-stone-100 {
+  background-color: #292524 !important;
+}
+
+html.dark-mode .bg-stone-200\/80 {
+  background-color: #181514 !important;
+}
+
+html.dark-mode .bg-\[\#FDF2F0\],
+html.dark-mode .bg-\[\#FDF2F2\] {
+  background-color: #361B18 !important;
+}
+
+/* Lined notebook paper in dark mode */
+html.dark-mode .teka-lined-paper {
+  background-color: #24201E !important;
+  background-image:
+    linear-gradient(90deg, transparent 42px, rgba(180, 74, 50, 0.35) 42px, rgba(180, 74, 50, 0.35) 44px, transparent 44px),
+    repeating-linear-gradient(0deg, transparent, transparent 31px, rgba(140, 125, 112, 0.18) 31px, rgba(140, 125, 112, 0.18) 32px) !important;
+}
+
+/* Warm milk cream / parchment text (#F5EFEB) */
+html.dark-mode .text-\[\#231F1D\],
+html.dark-mode .text-\[\#1A1615\],
+html.dark-mode .text-\[\#2E2414\],
+html.dark-mode .text-\[\#2F2621\],
+html.dark-mode .text-\[\#3A281E\],
+html.dark-mode .text-\[\#3A322D\],
+html.dark-mode .text-\[\#4A413B\],
+html.dark-mode .text-stone-900 {
+  color: #F5EFEB !important;
+}
+
+html.dark-mode .text-\[\#5A4F47\],
+html.dark-mode .text-\[\#655A52\],
+html.dark-mode .text-\[\#7A6A5E\],
+html.dark-mode .text-\[\#7A7067\],
+html.dark-mode .text-\[\#7A542E\],
+html.dark-mode .text-\[\#243B67\],
+html.dark-mode .text-stone-700,
+html.dark-mode .text-stone-600 {
+  color: #D6CBC2 !important;
+}
+
+html.dark-mode .text-\[\#7A1C14\],
+html.dark-mode .text-\[\#B42318\] {
+  color: #FCA5A5 !important;
+}
+
+/* Terracotta accents (#B44A32 / #9E3B24) remain vibrant and legible */
+html.dark-mode .text-\[\#9E3B24\] {
+  color: #F08C70 !important;
+}
+
+html.dark-mode .bg-\[\#9E3B24\] {
+  background-color: #B44A32 !important;
+}
+
+html.dark-mode .bg-\[\#9E3B24\]:hover {
+  background-color: #9E3B24 !important;
+}
+
+/* Warm borders */
+html.dark-mode .border-\[\#DFD3C3\],
+html.dark-mode .border-\[\#D5C7B4\],
+html.dark-mode .border-\[\#E6D9C6\],
+html.dark-mode .border-\[\#EFE6D8\],
+html.dark-mode .border-\[\#F1E8DA\],
+html.dark-mode .border-\[\#E5DAC8\],
+html.dark-mode .border-\[\#E2D6C3\],
+html.dark-mode .border-\[\#CBBBA4\] {
+  border-color: #3E3632 !important;
+}
+
+/* Inputs, textareas & selects in dark mode */
+html.dark-mode input,
+html.dark-mode textarea,
+html.dark-mode select {
+  background-color: #181514 !important;
+  color: #F5EFEB !important;
+  border-color: #463D38 !important;
+}
+
+html.dark-mode input::placeholder,
+html.dark-mode textarea::placeholder {
+  color: #9A8D82 !important;
+}
+
+/* Warm Mom's Yellow Post-it for Secrets in dark mode (warm golden amber surface) */
+html.dark-mode .bg-\[\#FFF7C2\] {
+  background-color: #3A3016 !important;
+  border-color: #8A6F27 !important;
+}
+
+html.dark-mode .bg-\[\#FFF7C2\] .text-\[\#231F1D\],
+html.dark-mode .bg-\[\#FFF7C2\] .text-\[\#2E2414\],
+html.dark-mode .bg-\[\#FFF7C2\] p,
+html.dark-mode .bg-\[\#FFF7C2\] span {
+  color: #F7E8A4 !important;
+}
+
+html.dark-mode .text-\[\#7A5210\] {
+  color: #E8C55B !important;
+}
+
+/* Print stylesheet for A4 PDF Cookbook, A5 Booklet Imposition & Single-Recipe Card export */
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 10mm 12mm;
+  }
+
+  html,
+  body,
+  html.dark-mode,
+  html.dark-mode body {
+    background: #FFFFFF !important;
+    color: #1A1715 !important;
+    font-size: 10.5pt !important;
+    overflow: visible !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  .print-cookbook-modal {
+    position: static !important;
+    inset: auto !important;
+    background: transparent !important;
+    padding: 0 !important;
+    overflow: visible !important;
+    display: block !important;
+  }
+
+  .print-cookbook-shell,
+  .print-cookbook-scroll {
+    max-height: none !important;
+    overflow: visible !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    background: transparent !important;
+  }
+
+  .print-page-break {
+    page-break-after: always !important;
+    break-after: page !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+}

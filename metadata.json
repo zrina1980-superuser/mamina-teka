@@ -1,0 +1,10 @@
+{
+  "name": "Mamina Teka by Zrina",
+  "description": "Digitalni obiteljski trezor recepata koji spaja toplinu mamine rukopisne teke s pametnim pretraživanjem, pretvorbom starinskih mjera i načinom za kuhanje.",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
