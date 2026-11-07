@@ -73,6 +73,10 @@ Za lokalni produkcijski poslužitelj nakon builda postavite `NODE_ENV=production
 - [Arhitektura](./ARCHITECTURE.md)
 - [Povijest promjena](./CHANGELOG.md)
 
+## Licenca
+
+Izvorni kod ovog projekta licenciran je pod MIT licencom; pogledaj [LICENSE](./LICENSE). Sadržaji i sredstva trećih strana ostaju pod svojim uvjetima korištenja.
+
 ## Neobavezna podrška
 
 Ako ti je ovaj projekt bio koristan, možeš po želji podržati njegov daljnji razvoj na [Ko-fi](https://ko-fi.com/zrina).
