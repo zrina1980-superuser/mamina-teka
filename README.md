@@ -61,3 +61,7 @@
    ```bash
    npm run build
    ```
+
+## Neobavezna podrška
+
+Ako ti je ovaj projekt bio koristan, možeš po želji podržati njegov daljnji razvoj na [Ko-fi](https://ko-fi.com/zrina).
