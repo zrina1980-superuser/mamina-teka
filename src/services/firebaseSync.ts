@@ -32,7 +32,7 @@ import {
   markRecipeIdsAsDeleted,
 } from '../db/tekaDb';
 import { INITIAL_RECIPES } from '../db/seedRecipes';
-import { getDishIllustrationUri } from '../utils/visualAssets';
+import { getOfflineFallbackDishUri } from '../utils/visualAssets';
 import {
   MOCKUP_RECIPE_ID_SET,
   generateVaultInviteKey,
@@ -43,6 +43,7 @@ import {
   recoverIngredientsFromRecipeText,
   isValidImageSourceForCompression,
   isImageAlreadyOptimizedForSync,
+  resolveCategoryFromLabel,
   type Recipe,
   type IngredientGroup,
   type SyncProgressState,
@@ -997,7 +998,10 @@ function mergeRemoteDataIntoRecipe(
   } else if (isUsableRemoteImage(localCoverImg)) {
     resolvedImageUrl = localCoverImg;
   } else {
-    resolvedImageUrl = getDishIllustrationUri(title, category);
+    resolvedImageUrl = getOfflineFallbackDishUri(
+      title,
+      resolveCategoryFromLabel(category, title)
+    );
   }
 
   // 2. Resolve Original Handwritten Recipe Scan Image: never overwrite local scan if `imageSyncPending` is set
@@ -1728,4 +1732,3 @@ export async function runLocalSequentialSyncPass(): Promise<void> {
     });
   }
 }
-

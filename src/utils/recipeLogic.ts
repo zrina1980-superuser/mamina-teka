@@ -1764,7 +1764,7 @@ export function recoverIngredientsFromRecipeText(recipe: {
     for (const group of detected.updatedGroups) {
       for (const it of group.items) {
         const cleanLabel = it.name.replace(/\s*\(spomenuto u postupku\)/i, '').trim();
-        addUniqueItem(cleanLabel, it.amount, it.unit, it.originalMeasure);
+        addUniqueItem(cleanLabel, it.amount ?? 1, it.unit, it.originalMeasure);
       }
     }
   }
@@ -1869,5 +1869,4 @@ export function calculateSyncProgressPercent(progress: SyncProgressState): numbe
   const ratio = (progress.current / progress.total) * 100;
   return Math.min(100, Math.max(0, Math.round(ratio)));
 }
-
 

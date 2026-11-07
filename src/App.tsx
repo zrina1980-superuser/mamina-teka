@@ -494,9 +494,7 @@ export default function App() {
       const snapIsNonHome =
         topSnap &&
         (topSnap.tab !== 'teka' ||
-          topSnap.searchQuery.trim().length > 0 ||
-          (topSnap.tab === 'kategorije' &&
-            (topSnap.category !== 'all' || topSnap.subcategory !== 'all')));
+          topSnap.searchQuery.trim().length > 0);
       if (snapIsNonHome) {
         depth += 1; // return-to-home step
         if ((topSnap?.scrollY || 0) > 120) {

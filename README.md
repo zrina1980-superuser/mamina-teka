@@ -1,5 +1,7 @@
 # Mamina Teka
 
+> **Pokreni aplikaciju:** [mamina-teka.zrina.app](https://mamina-teka.zrina.app/)
+
 **Digitalni obiteljski spomenar maminih rukopisnih recepata** — progresivna web aplikacija (PWA) za očuvanje, pametnu digitalizaciju, kuhanje bez gašenja ekrana, obiteljsku sinkronizaciju i ispis uvezane obiteljske kuharice.
 
 ---
@@ -43,9 +45,11 @@
 
 ## Pokretanje projekta
 
+Potreban je Node.js 22.12 ili noviji. npm je podržani package manager.
+
 1. Instalirajte ovisnosti:
    ```bash
-   npm install
+   npm ci --legacy-peer-deps
    ```
 2. Konfigurirajte varijable okruženja (prema `.env.example`):
    - `GEMINI_API_KEY` — API ključ za Google Gemini / Imagen servise.
@@ -55,12 +59,19 @@
    ```
 4. Pokrenite jedinične testove čiste domenske logike:
    ```bash
-   npx tsx --test src/utils/recipeLogic.test.ts
+   npm test
    ```
 5. Izgradite produkcijsku verziju:
    ```bash
    npm run build
    ```
+
+Za lokalni produkcijski poslužitelj nakon builda postavite `NODE_ENV=production` pa pokrenite `npm start`. U PowerShellu: `$env:NODE_ENV="production"; npm start`.
+
+## Dokumentacija
+
+- [Arhitektura](./ARCHITECTURE.md)
+- [Povijest promjena](./CHANGELOG.md)
 
 ## Neobavezna podrška
 
