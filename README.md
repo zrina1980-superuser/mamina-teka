@@ -51,8 +51,7 @@ Potreban je Node.js 22.12 ili noviji. npm je podržani package manager.
    ```bash
    npm ci --legacy-peer-deps
    ```
-2. Konfigurirajte varijable okruženja (prema `.env.example`):
-   - `GEMINI_API_KEY` — API ključ za Google Gemini / Imagen servise.
+2. Za AI funkcije svaki korisnik unosi vlastiti Gemini API ključ u aplikaciji. Ključ se čuva u `localStorage` preglednika i šalje aplikacijskom poslužitelju uz AI zahtjeve; poslužitelj ga koristi za poziv Geminiju, ali ga ne pohranjuje trajno.
 3. Pokrenite razvojni poslužitelj (na portu `3000`):
    ```bash
    npm run dev
